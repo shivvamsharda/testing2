@@ -7,31 +7,41 @@ const Hero = () => {
       {/* Clean dark background */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-background/95" />
       
-      {/* Floating Memecoin Avatars - positioned like reference */}
+      {/* Floating Memecoin Avatars - All consistent size and style */}
       <div className="absolute inset-0 pointer-events-none">
-        {/* Top left - Shiba style */}
-        <div className="absolute top-24 left-16 w-20 h-20 rounded-full bg-gradient-to-br from-orange-400 to-orange-600 animate-float shadow-lg overflow-hidden">
-          <div className="w-full h-full flex items-center justify-center text-2xl">🐕</div>
+        {/* BONK - Top left */}
+        <div className="absolute top-24 left-16 w-16 h-16 rounded-full bg-gradient-to-br from-orange-400 to-orange-600 animate-float shadow-lg overflow-hidden border border-white/10 backdrop-blur-sm">
+          <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-orange-300/20 to-transparent">
+            <div className="text-2xl font-bold text-white">B</div>
+          </div>
         </div>
         
-        {/* Top right - Pepe style */}
-        <div className="absolute top-32 right-20 w-16 h-16 rounded-full bg-gradient-to-br from-green-400 to-green-600 animate-float shadow-lg overflow-hidden" style={{ animationDelay: '-1s' }}>
-          <div className="w-full h-full flex items-center justify-center text-xl">🐸</div>
+        {/* WIF/dogwifhat - Top right */}
+        <div className="absolute top-32 right-20 w-16 h-16 rounded-full bg-gradient-to-br from-pink-400 to-pink-600 animate-float shadow-lg overflow-hidden border border-white/10 backdrop-blur-sm" style={{ animationDelay: '-1s' }}>
+          <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-pink-300/20 to-transparent">
+            <div className="text-2xl font-bold text-white">W</div>
+          </div>
         </div>
         
-        {/* Bottom left - Doge style */}
-        <div className="absolute bottom-40 left-12 w-18 h-18 rounded-full bg-gradient-to-br from-yellow-400 to-yellow-600 animate-float shadow-lg overflow-hidden" style={{ animationDelay: '-3s' }}>
-          <div className="w-full h-full flex items-center justify-center text-lg">🚀</div>
+        {/* POPCAT - Bottom left */}
+        <div className="absolute bottom-40 left-12 w-16 h-16 rounded-full bg-gradient-to-br from-yellow-400 to-orange-500 animate-float shadow-lg overflow-hidden border border-white/10 backdrop-blur-sm" style={{ animationDelay: '-3s' }}>
+          <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-yellow-300/20 to-transparent">
+            <div className="text-2xl font-bold text-white">P</div>
+          </div>
         </div>
         
-        {/* Bottom right - Cat style */}
-        <div className="absolute bottom-32 right-16 w-14 h-14 rounded-full bg-gradient-to-br from-purple-400 to-purple-600 animate-float shadow-lg overflow-hidden" style={{ animationDelay: '-2s' }}>
-          <div className="w-full h-full flex items-center justify-center text-sm">😸</div>
+        {/* JUP (Jupiter) - Bottom right */}
+        <div className="absolute bottom-32 right-16 w-16 h-16 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 animate-float shadow-lg overflow-hidden border border-white/10 backdrop-blur-sm" style={{ animationDelay: '-2s' }}>
+          <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-blue-300/20 to-transparent">
+            <div className="text-2xl font-bold text-white">J</div>
+          </div>
         </div>
         
-        {/* Middle right - Moon style */}
-        <div className="absolute top-1/2 right-12 w-12 h-12 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 animate-float shadow-lg overflow-hidden" style={{ animationDelay: '-4s' }}>
-          <div className="w-full h-full flex items-center justify-center text-sm">🌙</div>
+        {/* RAY (Raydium) - Middle right */}
+        <div className="absolute top-1/2 right-12 w-16 h-16 rounded-full bg-gradient-to-br from-purple-400 to-purple-600 animate-float shadow-lg overflow-hidden border border-white/10 backdrop-blur-sm" style={{ animationDelay: '-4s' }}>
+          <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-purple-300/20 to-transparent">
+            <div className="text-2xl font-bold text-white">R</div>
+          </div>
         </div>
       </div>
 
