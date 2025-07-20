@@ -1,23 +1,25 @@
+
 import { Github, Twitter, MessageCircle } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const footerLinks = [
     {
       title: "Platform",
       links: [
-        { name: "Trading", href: "#" },
-        { name: "Analytics", href: "#" },
-        { name: "Supported Tokens", href: "#" },
-        { name: "API Docs", href: "#" }
+        { name: "Trading", href: "/trading" },
+        { name: "Analytics", href: "/analytics" },
+        { name: "Supported Tokens", href: "/tokens" },
+        { name: "API Docs", href: "/api-docs" }
       ]
     },
     {
       title: "Resources",
       links: [
-        { name: "Documentation", href: "#" },
-        { name: "Help Center", href: "#" },
-        { name: "Security", href: "#" },
-        { name: "Terms of Service", href: "#" }
+        { name: "Documentation", href: "/docs" },
+        { name: "Help Center", href: "/docs" },
+        { name: "Security", href: "/security" },
+        { name: "Terms of Service", href: "/terms" }
       ]
     },
     {
@@ -26,7 +28,7 @@ const Footer = () => {
         { name: "Discord", href: "#" },
         { name: "Telegram", href: "#" },
         { name: "Twitter", href: "#" },
-        { name: "Blog", href: "#" }
+        { name: "Blog", href: "/blog" }
       ]
     }
   ];
@@ -41,7 +43,7 @@ const Footer = () => {
           {/* Brand Section */}
           <div className="lg:col-span-2">
             <div className="mb-6">
-              <span className="text-3xl font-bold gradient-text-meme">MEMEOTC</span>
+              <Link to="/" className="text-3xl font-bold gradient-text-meme">MEMEOTC</Link>
             </div>
             <p className="text-muted-foreground leading-relaxed mb-6 max-w-md">
               The most advanced OTC trading platform for Solana memecoins. 
@@ -78,12 +80,21 @@ const Footer = () => {
               <ul className="space-y-3">
                 {section.links.map((link, linkIndex) => (
                   <li key={linkIndex}>
-                    <a 
-                      href={link.href}
-                      className="text-muted-foreground hover:text-foreground transition-colors"
-                    >
-                      {link.name}
-                    </a>
+                    {link.href.startsWith('#') ? (
+                      <a 
+                        href={link.href}
+                        className="text-muted-foreground hover:text-foreground transition-colors"
+                      >
+                        {link.name}
+                      </a>
+                    ) : (
+                      <Link 
+                        to={link.href}
+                        className="text-muted-foreground hover:text-foreground transition-colors"
+                      >
+                        {link.name}
+                      </Link>
+                    )}
                   </li>
                 ))}
               </ul>
@@ -98,8 +109,8 @@ const Footer = () => {
               © 2024 MemeOTC. All rights reserved.
             </div>
             <div className="flex items-center gap-6 text-sm text-muted-foreground">
-              <a href="#" className="hover:text-foreground transition-colors">Privacy Policy</a>
-              <a href="#" className="hover:text-foreground transition-colors">Terms of Service</a>
+              <Link to="/privacy" className="hover:text-foreground transition-colors">Privacy Policy</Link>
+              <Link to="/terms" className="hover:text-foreground transition-colors">Terms of Service</Link>
               <a href="#" className="hover:text-foreground transition-colors">Cookie Policy</a>
             </div>
           </div>

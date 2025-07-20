@@ -1,16 +1,17 @@
 
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import WalletButton from './WalletButton';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
-    { name: 'Trading Platform', href: '#platform' },
-    { name: 'Supported Tokens', href: '#tokens' },
-    { name: 'Analytics', href: '#analytics' },
-    { name: 'About', href: '#about' }
+    { name: 'Trading Platform', href: '/trading' },
+    { name: 'Supported Tokens', href: '/tokens' },
+    { name: 'Analytics', href: '/analytics' },
+    { name: 'About', href: '/about' }
   ];
 
   return (
@@ -20,21 +21,21 @@ const Navbar = () => {
           
           {/* Logo - refined */}
           <div className="flex items-center">
-            <span className="text-2xl font-bold bg-gradient-to-r from-primary to-purple-400 bg-clip-text text-transparent">
+            <Link to="/" className="text-2xl font-bold bg-gradient-to-r from-primary to-purple-400 bg-clip-text text-transparent">
               MEMEOTC
-            </span>
+            </Link>
           </div>
 
           {/* Desktop Navigation - cleaner spacing */}
           <div className="hidden md:flex items-center space-x-10">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.name}
-                href={item.href}
+                to={item.href}
                 className="text-muted-foreground hover:text-foreground transition-all duration-200 font-medium text-sm tracking-wide"
               >
                 {item.name}
-              </a>
+              </Link>
             ))}
           </div>
 
@@ -57,14 +58,14 @@ const Navbar = () => {
           <div className="md:hidden py-6 border-t border-border/30">
             <div className="flex flex-col space-y-4">
               {navItems.map((item) => (
-                <a
+                <Link
                   key={item.name}
-                  href={item.href}
+                  to={item.href}
                   className="text-muted-foreground hover:text-foreground transition-colors duration-200 font-medium py-2"
                   onClick={() => setIsOpen(false)}
                 >
                   {item.name}
-                </a>
+                </Link>
               ))}
               <WalletButton className="px-8 py-3 text-sm mt-4 w-full" />
             </div>
