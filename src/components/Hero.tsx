@@ -8,9 +8,9 @@ const Hero = () => {
       {/* Clean dark background */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-background/95" />
       
-      {/* Floating Memecoin Avatars - All consistent size and style */}
+      {/* Enhanced Floating Memecoin Avatars - Dynamic movement patterns */}
       <div className="absolute inset-0 pointer-events-none">
-        {/* BONK - Top left */}
+        {/* BONK - Top left - Standard float animation */}
         <div className="absolute top-24 left-16 w-16 h-16 rounded-full animate-float shadow-lg overflow-hidden border border-white/10 backdrop-blur-sm">
           <img 
             src="/lovable-uploads/c20442fe-b06a-40f4-9fb4-fad85a5bf1cd.png" 
@@ -19,8 +19,8 @@ const Hero = () => {
           />
         </div>
         
-        {/* WIF/dogwifhat - Top right */}
-        <div className="absolute top-32 right-20 w-16 h-16 rounded-full animate-float shadow-lg overflow-hidden border border-white/10 backdrop-blur-sm bg-white" style={{ animationDelay: '-1s' }}>
+        {/* WIF/dogwifhat - Top right - Alternative float pattern */}
+        <div className="absolute top-32 right-20 w-16 h-16 rounded-full animate-float-alt shadow-lg overflow-hidden border border-white/10 backdrop-blur-sm bg-white" style={{ animationDelay: '-2s' }}>
           <img 
             src="/lovable-uploads/5158b8e4-ca6d-4434-aad7-7c33ccd68cbb.png" 
             alt="dogwifhat" 
@@ -28,8 +28,8 @@ const Hero = () => {
           />
         </div>
         
-        {/* PEPE - Bottom left */}
-        <div className="absolute bottom-40 left-12 w-16 h-16 rounded-full animate-float shadow-lg overflow-hidden border border-white/10 backdrop-blur-sm" style={{ animationDelay: '-3s' }}>
+        {/* PEPE - Bottom left - Slow float pattern */}
+        <div className="absolute bottom-40 left-12 w-16 h-16 rounded-full animate-float-slow shadow-lg overflow-hidden border border-white/10 backdrop-blur-sm" style={{ animationDelay: '-5s' }}>
           <img 
             src="/lovable-uploads/5c1b6715-c4bd-462d-8f6e-fbfb61a8f071.png" 
             alt="PEPE" 
@@ -37,8 +37,8 @@ const Hero = () => {
           />
         </div>
         
-        {/* POPCAT - Bottom right */}
-        <div className="absolute bottom-32 right-16 w-16 h-16 rounded-full animate-float shadow-lg overflow-hidden border border-white/10 backdrop-blur-sm" style={{ animationDelay: '-2s' }}>
+        {/* POPCAT - Bottom right - Standard float with delay */}
+        <div className="absolute bottom-32 right-16 w-16 h-16 rounded-full animate-float shadow-lg overflow-hidden border border-white/10 backdrop-blur-sm" style={{ animationDelay: '-7s' }}>
           <img 
             src="/lovable-uploads/147e08a4-6b9c-4e42-bcf1-0f36f73682d3.png" 
             alt="POPCAT" 
@@ -46,8 +46,8 @@ const Hero = () => {
           />
         </div>
         
-        {/* JUP (Jupiter) - Middle right */}
-        <div className="absolute top-1/2 right-12 w-16 h-16 rounded-full animate-float shadow-lg overflow-hidden border border-white/10 backdrop-blur-sm" style={{ animationDelay: '-4s' }}>
+        {/* JUP (Jupiter) - Middle right - Alternative float pattern */}
+        <div className="absolute top-1/2 right-12 w-16 h-16 rounded-full animate-float-alt shadow-lg overflow-hidden border border-white/10 backdrop-blur-sm" style={{ animationDelay: '-3s' }}>
           <img 
             src="/lovable-uploads/c25e50ad-f670-47cb-9103-898ce9cb25f5.png" 
             alt="Jupiter" 
