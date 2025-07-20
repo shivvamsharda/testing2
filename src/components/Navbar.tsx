@@ -1,14 +1,15 @@
 
 import { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Plus } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import WalletButton from './WalletButton';
+import { Button } from '@/components/ui/button';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
-    { name: 'Trading Platform', href: '/trading' },
+    { name: 'Browse Listings', href: '/listings' },
     { name: 'Supported Tokens', href: '/tokens' },
     { name: 'Analytics', href: '/analytics' },
     { name: 'About', href: '/about' }
@@ -39,8 +40,14 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* Desktop CTA - refined button */}
-          <div className="hidden md:block">
+          {/* Desktop CTA - refined buttons */}
+          <div className="hidden md:flex items-center gap-4">
+            <Link to="/listings">
+              <Button variant="outline" className="flex items-center gap-2">
+                <Plus className="w-4 h-4" />
+                Create Listing
+              </Button>
+            </Link>
             <WalletButton className="px-8 py-3 text-sm" />
           </div>
 
@@ -67,6 +74,12 @@ const Navbar = () => {
                   {item.name}
                 </Link>
               ))}
+              <Link to="/listings">
+                <Button variant="outline" className="flex items-center gap-2 w-full mt-2">
+                  <Plus className="w-4 h-4" />
+                  Create Listing
+                </Button>
+              </Link>
               <WalletButton className="px-8 py-3 text-sm mt-4 w-full" />
             </div>
           </div>
